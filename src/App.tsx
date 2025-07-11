@@ -21,45 +21,45 @@ const initialScenarios: Scenario[] = [
     id: '1',
     name: '学习知识点',
     models: [
-      { id: '1-1', name: 'GPT-4' },
-      { id: '1-2', name: 'Claude-3' },
-      { id: '1-3', name: 'Gemini Pro' }
+      { id: '1-1', name: 'Github Copilot + Claude-4' },
+      { id: '1-2', name: 'Cursor + Claude-4' },
+      { id: '1-3', name: 'Gemini-2.5' }
     ]
   },
   {
     id: '2',
     name: '图表绘制',
     models: [
-      { id: '2-1', name: 'GPT-4' },
-      { id: '2-2', name: 'Claude-3' },
-      { id: '2-3', name: 'Gemini Pro' }
+      { id: '2-1', name: 'Github Copilot + Claude-4' },
+      { id: '2-2', name: 'Cursor + Claude-4' },
+      { id: '2-3', name: 'Gemini-2.5' }
     ]
   },
   {
     id: '3',
     name: '智能技术问答',
     models: [
-      { id: '3-1', name: 'GPT-4' },
-      { id: '3-2', name: 'Claude-3' },
-      { id: '3-3', name: 'Gemini Pro' }
+      { id: '3-1', name: 'Github Copilot + Claude-4' },
+      { id: '3-2', name: 'Cursor + Claude-4' },
+      { id: '3-3', name: 'Gemini-2.5' }
     ]
   },
   {
     id: '4',
     name: '代码补全',
     models: [
-      { id: '4-1', name: 'GPT-4' },
-      { id: '4-2', name: 'Claude-3' },
-      { id: '4-3', name: 'Copilot' }
+      { id: '4-1', name: 'Cursor + Claude-4' },
+      { id: '4-2', name: 'Github Copilot + Claude-4' },
+      { id: '4-3', name: 'Gemini-2.5' }
     ]
   },
   {
     id: '5',
     name: '项目理解',
     models: [
-      { id: '5-1', name: 'GPT-4' },
-      { id: '5-2', name: 'Claude-3' },
-      { id: '5-3', name: 'Gemini Pro' }
+      { id: '5-1', name: 'Github Copilot + Claude-4' },
+      { id: '5-2', name: 'Cursor + Claude-4' },
+      { id: '5-3', name: 'Gemini-2.5' }
     ]
   }
 ];
@@ -129,7 +129,7 @@ function App() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Ai产品榜
+            AI产品榜
           </h1>
           <p className="text-gray-400 text-sm">全球最新智能AI产品排行</p>
         </div>
@@ -137,17 +137,21 @@ function App() {
         {/* Navigation Tabs */}
         <div className="flex justify-center mb-8">
           <div className="flex bg-gray-800 rounded-lg p-1">
-            <button className="px-6 py-2 text-sm font-medium text-white bg-purple-600 rounded-md">
-              AI产品榜·应用榜 6月
-            </button>
-            <button className="px-6 py-2 text-sm font-medium text-gray-400 hover:text-white">
-              AI产品榜·网站榜 6月
-            </button>
+            <a href="http://www.javaedge.cn/" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2 text-sm font-medium text-white bg-purple-600 rounded-md">
+              《编程严选网》
+              </button>
+            </a>
+            <a href="http://javaedge.cn:3000/#/pilot" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2 text-sm font-medium text-gray-400 hover:text-white">
+              《导航站》
+              </button>
+            </a>
           </div>
         </div>
 
         {/* Scenarios */}
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {scenarios.map((scenario) => (
             <DndContext
               key={scenario.id}
@@ -167,7 +171,7 @@ function App() {
 
         {/* Footer */}
         <div className="text-center mt-16 text-gray-500 text-sm">
-          <p>© 2025 AI产品榜. All Rights Reserved.</p>
+          <p>© 2025 编程严选网. All Rights Reserved.</p>
         </div>
       </div>
     </div>

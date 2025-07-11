@@ -25,7 +25,7 @@ const ScenarioCard: React.FC<ScenarioCardProps> = ({
 
       {/* Content */}
       <div className="p-6">
-        <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-3">
           <SortableContext items={scenario.models.map(m => m.id)} strategy={verticalListSortingStrategy}>
             {scenario.models.map((model, index) => (
               <ModelItem
